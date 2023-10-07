@@ -170,3 +170,12 @@ HOOK到小程序加载! wxa+id
 QQ:1156024215     提供思路
 
 QQ:86523553         帮助解决首次安装编译不通过的问题
+
+
+### python使用方式
+
+1.首先安装依赖 pip install -r requirements.txt
+
+2.替换dll python WeChatWin.dll.py 3.9.7.29 x64 "C:/Program Files (x86)/Tencent/WeChat/[3.9.7.29]"
+
+3.启动firda注入 python WeChatAppEx.exe.py 8447 x64
