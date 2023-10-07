@@ -6,9 +6,9 @@ import traceback
 
 
 def main():
-    version = sys.argv[1]
-    bit = sys.argv[2]
-    exePath = sys.argv[3]
+    version = sys.argv[1].lower()
+    bit = sys.argv[2].lower()
+    exePath = sys.argv[3].lower()
 
     if os.path.exists(os.path.join(exePath, 'WeChatWin_old.dll')):
         print('已经是替换后的WeChatWin.dll! 请勿重复运行')
