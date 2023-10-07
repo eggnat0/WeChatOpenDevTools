@@ -37,5 +37,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # python .\WeChatWin.dll.py 3.9.7.29 x64 "C:/Program Files (x86)/Tencent/WeChat/[3.9.7.29]"
+    # python WeChatWin.dll.py 3.9.7.29 x64 "C:/Program Files (x86)/Tencent/WeChat/[3.9.7.29]"
     main()
