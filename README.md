@@ -178,8 +178,18 @@ QQ:86523553         帮助解决首次安装编译不通过的问题
 
 2.关闭微信客户端
 
-3.替换dll python WeChatWin.dll.py 3.9.7.29 x64 "C:/Program Files (x86)/Tencent/WeChat/[3.9.7.29]"
+3.替换dll 
+
+     python WeChatWin.dll.py 3.9.7.29 x64 "C:/Program Files (x86)/Tencent/WeChat/[3.9.7.29]"
 
 4.打开微信客户端
 
-5.启动firda注入 python WeChatAppEx.exe.py 8447 x64
+5.启动firda注入 
+
+     python WeChatAppEx.exe.py 8447 x64
+
+
+### 微信3.9.7.29版本安装包下载地址
+
+https://www.123pan.com/s/6dWtVv-lg24h.html  
+提取码:IotH
