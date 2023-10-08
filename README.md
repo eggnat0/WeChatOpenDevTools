@@ -16,7 +16,7 @@
 
 
 
-志远QQ:125858690099
+志远QQ:1258586900
 
 ### 支持版本
 最新版下载地址：https://pc.weixin.qq.com/
@@ -176,6 +176,20 @@ QQ:86523553         帮助解决首次安装编译不通过的问题
 
 1.首先安装依赖 pip install -r requirements.txt
 
-2.替换dll python WeChatWin.dll.py 3.9.7.29 x64 "C:/Program Files (x86)/Tencent/WeChat/[3.9.7.29]"
+2.关闭微信客户端
 
-3.启动firda注入 python WeChatAppEx.exe.py 8447 x64
+3.替换dll 
+
+     python WeChatWin.dll.py 3.9.7.29 x64 "C:/Program Files (x86)/Tencent/WeChat/[3.9.7.29]"
+
+4.打开微信客户端
+
+5.启动firda注入 
+
+     python WeChatAppEx.exe.py 8447 x64
+
+
+### 微信3.9.7.29版本安装包下载地址
+
+https://www.123pan.com/s/6dWtVv-lg24h.html  
+提取码:IotH
