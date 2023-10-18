@@ -20,7 +20,7 @@ def main():
         return
 
     try:
-        with open(os.path.join(exePath, 'WeChatWin_old.dll'), 'wb') as f:
+        with open(os.path.join(exePath, 'WeChatWin_old.dll'), 'rb') as f:
             WeChatWin = f.read()
         os.remove(os.path.join(exePath, 'WeChatWin_old.dll'))
         with open(os.path.join(exePath, 'WeChatWin.dll'), 'wb') as f:
