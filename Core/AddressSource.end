@@ -1,5 +1,1 @@
 ;
-for(var addressname in address){
-    address[addressname] = parseInt(address[addressname]);
-};
-
