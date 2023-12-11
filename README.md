@@ -171,6 +171,19 @@ QQ:1156024215     提供思路
 
 QQ:86523553         帮助解决首次安装编译不通过的问题
 
+### 查看WeChatAppEx.exe版本
+
+####  方法1
+
+要查看小程序版本的话 在文件管理器地址里 打上 %appdata%\Tencent\WeChat\XPlugin\Plugins\RadiumWMPF\  回车即可看到 如果里面有多个文件的话全部删除后重新打开微信即可看到文件夹中重新生成的文件名
+
+#####  方法2
+
+也可以用任务管理器查看名为WeChatAppEx.exe的文件路径  
+如：C:\Users\你的用户名\AppData\Roaming\Tencent\WeChat\XPlugin\Plugins\RadiumWMPF\8519\extracted\runtime 
+其中 8519就是版本
+
+
 
 ### python使用方式
 

@@ -41,10 +41,12 @@ function writeStdString(s, content) {
 Interceptor.attach(address.LaunchAppletBegin, {
     onEnter(args) {
         send("HOOK到小程序加载! " + readStdString(args[1]))
-        Memory.protect(address.SetEnableDebug, 20, 'rw-')
-        address.SetEnableDebug.writeUtf8String("              ")
-        send("已过反调试")
-        
+        if(address.SetEnableDebug){
+            Memory.protect(address.SetEnableDebug, 20, 'rw-')
+            address.SetEnableDebug.writeUtf8String("              ")
+            send("已过反调试")
+        }
+
         for (var i = 0; i < 0x1000; i+=8) {
             try {
                 var s = readStdString(args[2].add(i))
