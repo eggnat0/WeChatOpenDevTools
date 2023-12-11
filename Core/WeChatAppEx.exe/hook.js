@@ -43,10 +43,12 @@ function writeStdString(s, content) {
 //HOOK 启动配置
 Interceptor.attach(address.LaunchAppletBegin, {
     onEnter(args) {
-        send("HOOK到小程序加载! " + readStdString(args[1]))
-        Memory.protect(address.SetEnableDebug, 20, 'rw-')
-        address.SetEnableDebug.writeUtf8String("              ")
-        send("已过反调试")
+        send("HOOK到小程序加载! " + readStdString(args[1]));
+        if(address.SetEnableDebug){
+            Memory.protect(address.SetEnableDebug, 20, 'rw-');
+            address.SetEnableDebug.writeUtf8String("              ");
+            send("已过反调试")
+        }
 
         for (var i = 0; i < 0x1000; i += 8) {
             try {
@@ -82,20 +84,23 @@ Interceptor.attach(address.WechatAppExLog, {
 */
 
 //云函数捕获
-Interceptor.attach(address.OnOperateWXData, {
-    onEnter(args) {
-        let json = this.context.rdx.readPointer().readUtf8String();
-        console.log("捕获到云函数返回", json)
+if(address.OnOperateWXData && address.OperateWXData){
+    Interceptor.attach(address.OnOperateWXData, {
+        onEnter(args) {
+            let json = this.context.rdx.readPointer().readUtf8String();
+            console.log("捕获到云函数返回", json)
 
-    }
-});
+        }
+    });
 
-Interceptor.attach(address.OperateWXData, {
-    onEnter(args) {
-        let json =this.context.rdx.readPointer().readUtf8String();
-        console.log("捕获到云函数请求",json)
-    }
-});
+    Interceptor.attach(address.OperateWXData, {
+        onEnter(args) {
+            let json =this.context.rdx.readPointer().readUtf8String();
+            console.log("捕获到云函数请求",json)
+        }
+    });
+}
+
 
 
 send("WeChatAppEx.exe 注入成功!")
