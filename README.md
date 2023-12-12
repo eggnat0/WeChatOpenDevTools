@@ -45,7 +45,7 @@ npm install
      或者自行百度 node-gyp
      
 
-####  WeChatWin.dll.js 
+####  WeChatWin.dll.js （不建议使用）
 
 微信浏览器打开F12需要运行 WeChatWin.dll.js  并传入参数
 
